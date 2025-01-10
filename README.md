@@ -2,7 +2,7 @@
 
 ### Run the `SpellingDemo` class 
 
-- Type the available options
+- Type the required test name (example: `two_bee_school`) from the available options
 - Keep doing enter for next word. Press q anytime to quit.
 
 Here is an example output,
@@ -18,6 +18,7 @@ Enter the difficulty level, options are below:
 	one_bee_champions 
 	two_bee_school 
 	two_bee_champions
+	
 two_bee_school
 Number of words: 160
 
