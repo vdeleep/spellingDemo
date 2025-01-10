@@ -41,8 +41,13 @@ public class SpellingDemo {
 
             int i = 0;
 
-            System.out.println("\nPress enter to get next word !, or Q to quit");
+            System.out.println("\nPress enter to get next word !, or q/Q to quit or r/R for replay again");
+
+            String previousWord;
             for (String word : lines) {
+
+                System.out.print(word);
+                runAudioFile(word);
 
                 String input = scanner.nextLine();
 
@@ -50,11 +55,14 @@ public class SpellingDemo {
                     System.out.println("\n\n *** You did an awesome job ! *** ");
                     System.out.println("\t\t Finished: " + i + " / " + lines.size());
                     exit(0);
+
+                } else if (input.equalsIgnoreCase("r")) {
+
+                    do {
+                        runAudioFile(word);
+                        input = scanner.nextLine();
+                    } while (input.equalsIgnoreCase("R"));
                 }
-
-
-                System.out.print(word);
-                runAudioFile(word);
 
                 i++;
             }
@@ -70,8 +78,7 @@ public class SpellingDemo {
 
     public static void runAudioFile(String word) {
 
-        try (FileInputStream fileInputStream = new FileInputStream("src/main/resources/" + word + ".mp3");
-             BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
+        try (FileInputStream fileInputStream = new FileInputStream("src/main/resources/" + word + ".mp3"); BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
 
 
             Player player = new Player(bufferedInputStream);
