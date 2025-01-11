@@ -25,7 +25,8 @@ public class DownloadAudio {
 //            URL resource = classLoader.getResource("words/three_bee_school.txt");
 //            URL resource = classLoader.getResource("words/one_bee_champions.txt");
 //            URL resource = classLoader.getResource("words/two_bee_champions.txt");
-            URL resource = classLoader.getResource("words/three_bee_champions.txt");
+//            URL resource = classLoader.getResource("words/three_bee_champions.txt");
+            URL resource = classLoader.getResource("words/new_words.txt");
             File file = new File(resource.toURI());
 
             lines = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
