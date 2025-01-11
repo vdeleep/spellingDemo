@@ -18,7 +18,7 @@ public class SpellingDemo {
     public static void main(String[] args) {
 
         System.out.println("Welcome to spelling test");
-        System.out.println("-------------------------\n\n\n");
+        System.out.println("-------------------------\n\n");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -28,7 +28,9 @@ public class SpellingDemo {
 
             ClassLoader classLoader = DownloadAudio.class.getClassLoader();
 
-            System.out.println("Enter the difficulty level, options are below: \n \tone_bee_school \n\tone_bee_champions \n\ttwo_bee_school \n\ttwo_bee_champions");
+            System.out.println("Here are the difficulty levels: \n\tnew_words \n\tone_bee_school \n\tone_bee_champions \n\ttwo_bee_school \n\ttwo_bee_champions \n\tthree_bee_school \n\tthree_bee_champions\n");
+            System.out.println("Select the level name here ==>");
+
             Scanner filenameScanner = new Scanner(System.in);
             String fileName = filenameScanner.nextLine();
 
